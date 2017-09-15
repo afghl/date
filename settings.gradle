@@ -1,2 +1,6 @@
 rootProject.name = 'date'
 
+include 'facade'
+
+project(':facade').projectDir = "$rootDir/facade" as File
+
