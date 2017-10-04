@@ -1,4 +1,4 @@
-package com.afghl.date;
+package com.afghl.restaurant;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

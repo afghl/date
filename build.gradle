@@ -4,7 +4,6 @@ version '1.0-RELEASE'
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'org.springframework.boot'
 
 sourceCompatibility = 1.8
 buildscript {
@@ -15,7 +14,7 @@ buildscript {
 
 
 jar {
-    baseName = 'date'
+    baseName = 'restaurant'
     version = '1.0-RELEASE'
 }
 
