@@ -1,6 +1,6 @@
-rootProject.name = 'date'
+rootProject.name = 'restaurant'
 
-include 'facade'
+include 'webapi'
 
-project(':facade').projectDir = "$rootDir/facade" as File
+project(':webapi').projectDir = "$rootDir/webapi" as File
 

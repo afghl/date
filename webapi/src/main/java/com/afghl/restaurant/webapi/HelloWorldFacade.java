@@ -1,4 +1,4 @@
-package com.afghl.restaurant.facade;
+package com.afghl.restaurant.webapi;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
