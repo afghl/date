@@ -1,6 +1,4 @@
 rootProject.name = 'restaurant'
 
 include 'webapi'
-
-project(':webapi').projectDir = "$rootDir/webapi" as File
-
+include 'restaurant-dinning'

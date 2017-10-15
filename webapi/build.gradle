@@ -8,15 +8,12 @@ buildscript {
     dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") }
 }
 
-jar {
-    baseName = 'facade'
-    version = '1.0-RELEASE'
-}
 sourceCompatibility = 1.8
 
 repositories { mavenCentral() }
 
 dependencies {
+    compile project(':restaurant-dinning')
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')

@@ -1,9 +1,9 @@
-group 'com.afghl'
-version '1.0-RELEASE'
-
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven'
+    group = GROUP
+    version = VERSION
+}
 
 sourceCompatibility = 1.8
 buildscript {
@@ -13,10 +13,10 @@ buildscript {
 }
 
 
-jar {
-    baseName = 'restaurant'
-    version = '1.0-RELEASE'
-}
+//jar {
+//    baseName = 'restaurant'
+//    version = '1.0-RELEASE'
+//}
 
 repositories {
     mavenCentral()
