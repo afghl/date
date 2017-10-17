@@ -1,16 +1,5 @@
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
-
-buildscript {
-    ext { springBootVersion = '1.5.7.RELEASE' }
-    repositories { mavenCentral() }
-    dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") }
-}
-
+description = '''webapi'''
 sourceCompatibility = 1.8
-
-repositories { mavenCentral() }
 
 dependencies {
     compile project(':restaurant-dinning')

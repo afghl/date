@@ -1,15 +1,9 @@
 description = '''dinning'''
 sourceCompatibility = 1.8
 
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     compile 'org.springframework:spring-context'
     compile 'org.springframework.security:spring-security-core'
-    compile 'org.springframework.social:spring-social-github:1.0.0.M4'
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
 
     testCompile group: 'junit', name: 'junit', version: '4.12'

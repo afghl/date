@@ -1,25 +1,20 @@
+buildscript {
+    ext { springBootVersion = '1.5.7.RELEASE' }
+    repositories { mavenCentral() }
+    dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") }
+}
+
 allprojects {
-    apply plugin: 'java'
-    apply plugin: 'maven'
     group = GROUP
     version = VERSION
-}
 
-sourceCompatibility = 1.8
-buildscript {
-    repositories {
+    apply plugin: 'java'
+    apply plugin: 'maven'
+    apply plugin: 'org.springframework.boot'
+
+    repositories { 
         mavenCentral()
     }
-}
-
-
-//jar {
-//    baseName = 'restaurant'
-//    version = '1.0-RELEASE'
-//}
-
-repositories {
-    mavenCentral()
 }
 
 sourceCompatibility = 1.8
