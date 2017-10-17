@@ -5,7 +5,7 @@ import com.afghl.restaurant.dinning.service.DinningService;
 
 class DinnerServiceImpl implements DinningService {
     @Override
-    public Dinning getDinner(Long id) {
+    public Dinning get(Long id) {
         return null;
     }
 }

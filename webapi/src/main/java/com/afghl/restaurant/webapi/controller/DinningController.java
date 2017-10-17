@@ -1,4 +1,4 @@
-package com.afghl.restaurant.webapi.controller.dinning;
+package com.afghl.restaurant.webapi.controller;
 
 import com.afghl.restaurant.dinning.service.DinningService;
 import com.afghl.restaurant.webapi.dto.DinningDto;
