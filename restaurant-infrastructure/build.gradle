@@ -3,8 +3,12 @@ plugins {
 }
 
 dependencies {
+//    compile project(':restaurant-dinning')
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
     // for flyway db migration
     compile "mysql:mysql-connector-java:5.1.24"
+    // to fix hibernate deserialize issue
+    compile 'org.hibernate:hibernate-java8'
 }
 
 // flyway db migration configuration

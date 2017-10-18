@@ -1,5 +1,6 @@
 package com.afghl.restaurant.webapi.controller;
 
+import com.afghl.restaurant.dinning.domain.dinning.Dinning;
 import com.afghl.restaurant.dinning.service.DinningService;
 import com.afghl.restaurant.webapi.dto.DinningDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,8 @@ public class DinningController {
 
     @RequestMapping(path = "/dinning")
     public DinningDto get() {
+        Dinning dinning = service.get((long) 1);
+        System.out.printf("dinning: " + dinning);
         return null;
     }
 }
