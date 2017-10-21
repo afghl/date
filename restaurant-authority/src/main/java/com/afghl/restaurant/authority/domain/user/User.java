@@ -9,6 +9,11 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "user")
 public class User {
+    private final static String USER_TYPE_CUSTOMER = "CUSTOMER";
+    private final static String USER_TYPE_WAITER = "WAITER";
+    private final static String USER_TYPE_COOK = "COOK";
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -24,4 +29,10 @@ public class User {
 
     @Column(name = "updated_at", insertable = false, updatable = false)
     private LocalDateTime updatedAt;
+
+    public boolean hasRole(UserRole role) {
+        return role == UserRole.CUSTOMER && USER_TYPE_CUSTOMER.equals(userType) ||
+                role == UserRole.COOK && USER_TYPE_COOK.equals(userType) ||
+                role == UserRole.WAITER && USER_TYPE_WAITER.equals(userType);
+    }
 }

@@ -1,7 +1,9 @@
 package com.afghl.restaurant.webapi.controller;
 
+import com.afghl.restaurant.authority.domain.user.UserRole;
 import com.afghl.restaurant.dinning.domain.dinning.Dinning;
 import com.afghl.restaurant.dinning.service.DinningService;
+import com.afghl.restaurant.webapi.aop.AuthorityCheck;
 import com.afghl.restaurant.webapi.dto.DinningDto;
 import com.afghl.restaurant.webapi.transformer.DinningTransformer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +18,9 @@ public class DinningController {
     private DinningTransformer transformer;
 
     @RequestMapping(path = "/api/dinning")
-    public DinningDto get() {
+    @AuthorityCheck(role = UserRole.CUSTOMER)
+    public DinningDto get(Long userId) {
+        System.out.println(userId);
         Dinning dinning = service.get((long) 1);
         System.out.printf("dinning: " + dinning);
         return transformer.transDinning(dinning);
