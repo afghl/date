@@ -10,5 +10,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface AuthorityCheck {
-    UserRole role();
+    UserRole role() default UserRole.ALL;
 }

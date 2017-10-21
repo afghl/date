@@ -31,7 +31,8 @@ public class User {
     private LocalDateTime updatedAt;
 
     public boolean hasRole(UserRole role) {
-        return role == UserRole.CUSTOMER && USER_TYPE_CUSTOMER.equals(userType) ||
+        return role == UserRole.ALL ||
+                role == UserRole.CUSTOMER && USER_TYPE_CUSTOMER.equals(userType) ||
                 role == UserRole.COOK && USER_TYPE_COOK.equals(userType) ||
                 role == UserRole.WAITER && USER_TYPE_WAITER.equals(userType);
     }
