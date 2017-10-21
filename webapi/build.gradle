@@ -5,6 +5,7 @@ dependencies {
     compile project(':restaurant-dinning')
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-data-rest')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
