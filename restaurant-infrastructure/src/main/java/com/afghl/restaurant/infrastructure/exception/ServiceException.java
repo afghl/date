@@ -1,6 +1,7 @@
-package com.afghl.restaurant.exception;
+package com.afghl.restaurant.infrastructure.exception;
 
 public class ServiceException extends Exception {
+
     public ServiceException(String message) {
         super(message);
     }

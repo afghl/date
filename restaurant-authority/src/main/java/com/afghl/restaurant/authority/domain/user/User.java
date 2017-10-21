@@ -1,5 +1,6 @@
 package com.afghl.restaurant.authority.domain.user;
 
+import com.afghl.restaurant.infrastructure.domain.DomainModel;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -8,11 +9,10 @@ import java.time.LocalDateTime;
 @Data
 @Entity
 @Table(name = "user")
-public class User {
+public class User extends DomainModel {
     private final static String USER_TYPE_CUSTOMER = "CUSTOMER";
     private final static String USER_TYPE_WAITER = "WAITER";
     private final static String USER_TYPE_COOK = "COOK";
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,5 +1,6 @@
 package com.afghl.restaurant.dinning.domain.dinning;
 
+import com.afghl.restaurant.infrastructure.domain.DomainModel;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -8,7 +9,7 @@ import java.time.LocalDateTime;
 @Data
 @Entity
 @Table(name = "dinning")
-public class Dinning {
+public class Dinning extends DomainModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
