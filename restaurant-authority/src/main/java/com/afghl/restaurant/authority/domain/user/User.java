@@ -1,4 +1,4 @@
-package com.afghl.restaurant.dinning.domain.dinning;
+package com.afghl.restaurant.authority.domain.user;
 
 import lombok.Data;
 
@@ -7,23 +7,17 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name = "dinning")
-public class Dinning {
+@Table(name = "user")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "table_id", nullable = false)
-    private long tableId;
+    @Column(name = "name", nullable = false)
+    private String name;
 
-    @Column(name = "status", nullable = false)
-    private int status;
-
-    @Column(name = "started_at")
-    private LocalDateTime startedAt;
-
-    @Column(name = "ended_at")
-    private LocalDateTime endedAt;
+    @Column(name = "user_type", nullable = false)
+    private String userType;
 
     @Column(name = "created_at", insertable = false, updatable = false)
     private LocalDateTime createdAt;

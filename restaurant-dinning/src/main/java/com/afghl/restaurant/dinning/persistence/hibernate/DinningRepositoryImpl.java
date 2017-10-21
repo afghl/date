@@ -6,12 +6,9 @@ import com.afghl.restaurant.infrastructure.persistence.hibernate.HibernateReposi
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class DinningRepositoryImpl extends HibernateRepository implements DinningRepository {
-
+public class DinningRepositoryImpl extends HibernateRepository<Dinning> implements DinningRepository {
     @Override
-    public Dinning find(Long id) {
-        return (Dinning) getSession().
-                createQuery("from Dinning where id = ?").
-                setParameter(0, id).uniqueResult();
+    protected Class<Dinning> getModelType() {
+        return Dinning.class;
     }
 }

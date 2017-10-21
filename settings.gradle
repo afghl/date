@@ -2,5 +2,6 @@ rootProject.name = 'restaurant'
 
 include 'webapi'
 include 'restaurant-dinning'
+include 'restaurant-authority'
 include 'restaurant-infrastructure'
 

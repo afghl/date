@@ -17,6 +17,7 @@ allprojects {
     }
 
     dependencies {
+        compile 'org.projectlombok:lombok'
         testCompile 'junit:junit'
         testCompile 'org.mockito:mockito-core'
     }
